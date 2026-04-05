@@ -1,5 +1,5 @@
 <?php
-function menulateral (){
+function menulateral (): string{
     return "
     <li class='nav-item'>
             <a href='index.php?menu=usuarios&opc=registro' class='nav-link'>

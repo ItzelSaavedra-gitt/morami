@@ -5,7 +5,7 @@ $opc=$_GET['opc'] ?? 'registro';
 if ($menu=='usuarios'){
         switch ($opc){
             case 'index':
-                include 'views/usuarios.php';
+                include 'views/usuario.php';
                 break;
             case 'registro':
                 include 'views/registro_usu.php';
