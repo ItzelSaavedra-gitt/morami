@@ -1,6 +1,7 @@
 <?php
-function parteinferior(){
-    return "
+function parteinferior()
+{
+  return "
     <!-- Control Sidebar -->
   <aside class='control-sidebar control-sidebar-dark'>
     <!-- Control sidebar content goes here -->
@@ -41,4 +42,3 @@ function parteinferior(){
 </html>
     ";
 }
-?>

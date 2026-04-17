@@ -1,9 +1,15 @@
+<?php
+include 'views/includes/menulateral.php';
+include 'views/includes/parteinferior.php';
+include 'views/includes/partesuperior.php';
+?>
+<?=partesuperior(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GrupoMorami | Simple Tables</title>
+  <title>GrupoMorami | Usuarios registrados</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -28,6 +34,7 @@
       </div>
     </div>
   </div>
+
   <div class="card-body table-responsive p-0">
     <table class="table table-hover text-nowrap">
       <thead>
@@ -35,28 +42,24 @@
           <th>Nombre</th>
           <th>Apellido Paterno</th>
           <th>Apellido Materno</th>
-          <th>User</th>
-          <th>Rol</th>
-          <th>Estatus</th>
+          <th>Usuario</th>
+          <th>Contraseña</th>
         </tr>
       </thead>
       <tbody>
+        <?php
+        foreach($tabla as $fila ){
+        ?>
         <tr>
-          <td>Juan</td>
-          <td>Fernandez</td>
+          <td><?php echo $fila['nombre']; ?></td>
+          <td><?php echo $fila['apellidoPaterno']; ?></td>
           <td>Hernandez</td>
           <td>fhernandez2026</td>
-          <td>Administrador Usuario</td>
-          <td><span class="badge badge-success">Activo</span></td>
+          <td></td>
         </tr>
-        <tr>
-          <td>María</td>
-          <td>López</td>
-          <td>Sánchez</td>
-          <td>Lopsanchez2026</td>
-          <td>Administrador Usuario</td>
-          <td><span class="badge badge-danger">Inactivo</span></td>
-        </tr>
+        <?php
+        }
+        ?>
       </tbody>
     </table>
   </div>
@@ -75,3 +78,4 @@
     <i class="fas fa-home" style="color: #FFD700; font-size: 20px;"></i>
     Inicio
 </button>
+<?= parteinferior(); ?>

@@ -1,6 +1,7 @@
 <?php
-function partesuperior (){
-    return `
+function partesuperior()
+{
+  return "
     <!DOCTYPE html>
 <html lang='es'>
 <head>
@@ -104,14 +105,13 @@ function partesuperior (){
           <a href='#' class='d-block'>Administrador</a>
         </div>
       </div>
-  
-     ${menulateral()}
-     
+    "
+    . menulateral() .
+    "
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
 
-    `;
+    ";
 }
-?>

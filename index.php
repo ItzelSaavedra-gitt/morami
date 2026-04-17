@@ -1,11 +1,19 @@
 <?php
+require_once 'config/database.php';
+require_once 'controllers/UsuarioController.php';
+require_once 'functions.php';
+
 $menu=$_GET['menu'] ?? 'usuarios';
-$opc=$_GET['opc'] ?? 'registro';
+$opc=$_GET['opc '] ?? 'index';
+
+$db=new Database();
+$conexion = $db->getConnection();//se abre la conexon a base de datos 
 
 if ($menu=='usuarios'){
         switch ($opc){
             case 'index':
-                include 'views/usuario.php';
+                $usuario=new UsuarioController($conexion); 
+                $usuario-> index();
                 break;
             case 'registro':
                 include 'views/registro_usu.php';

@@ -1,24 +1,25 @@
 <?php
-function menulateral (): string{
-    return "
+function menulateral(): string
+{
+  return "
     <li class='nav-item'>
             <a href='index.php?menu=usuarios&opc=registro' class='nav-link'>
               <i class='nav-icon fas fa-users'></i>
-              <p>Usuarios </p>
+              Usuarios 
             </a>
           </li>
 
           <li class='nav-item'>
             <a href='index.php?menu=productos&opc=registro' class='nav-link active'>
               <i class='nav-icon fas fa-tachometer-alt'></i>
-              <p>Productos </p>
+              Productos
             </a>
           </li>
 
           <li class='nav-item'>
             <a href='index.php?menu=inventario&opc=registro' class='nav-link'>
               <i class='nav-icon fas fa-boxes'></i>
-              <p> Inventario</p>
+              Inventario
             </a>
           </li>
 
@@ -26,23 +27,22 @@ function menulateral (): string{
           <li class='nav-item'>
             <a href='index.php?menu=cotizaciones&opc=registro' class='nav-link'>
               <i class='nav-icon fas fa-file-invoice'></i>
-              <p> Cotizaciones</p>
+               Cotizaciones
             </a>
           </li>
 
           <li class='nav-item'>
             <a href='index.php?menu=pedidos&opc=registro' class='nav-link'>
               <i class='nav-icon fas fa-shopping-cart'></i>
-              <p> Pedidos </p>
+               Pedidos 
             </a>
           </li>
 
         <li class='nav-item'>
          <a href='pedidos.html' class='nav-link'>
           <i class='nav-icon fas fa-cog'></i>
-           <p>Configuraciones generales</p>
+           Configuraciones generales
           </a>
         </li>
     ";
 }
-?>
