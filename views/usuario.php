@@ -69,10 +69,11 @@ include 'views/includes/partesuperior.php';
         </div>
 
         
-
+<a href="?menu=usuarios&opc=registro"> 
 <button style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
  Registrar Usuario
 </button>
+</a>
 
 <button style="padding: 10px 20px; cursor: pointer;">
     <i class="fas fa-home" style="color: #FFD700; font-size: 20px;"></i>

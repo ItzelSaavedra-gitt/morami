@@ -30,6 +30,12 @@ class UsuarioController {
             
     }
 
+    public function vistacrear(){
+        include 'views/registro_usu.php';
+
+    }
+
+
     public function crear():void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nombre = $_POST['nombre'] ?? '';

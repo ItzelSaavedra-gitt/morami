@@ -4,19 +4,21 @@ require_once 'controllers/UsuarioController.php';
 require_once 'functions.php';
 
 $menu=$_GET['menu'] ?? 'usuarios';
-$opc=$_GET['opc '] ?? 'index';
+$opc=$_GET['opc'] ?? 'index';
 
 $db=new Database();
 $conexion = $db->getConnection();//se abre la conexon a base de datos 
 
+
+
 if ($menu=='usuarios'){
+     $usuario=new UsuarioController($conexion);
         switch ($opc){
-            case 'index':
-                $usuario=new UsuarioController($conexion); 
+            case 'index':   
                 $usuario-> index();
                 break;
             case 'registro':
-                include 'views/registro_usu.php';
+               $usuario->vistacrear(); 
                 break;
         }
 }
