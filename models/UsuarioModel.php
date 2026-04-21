@@ -11,10 +11,10 @@ class UsuarioModel {
         return $this->db->query($sql)->fetchAll();
     }
 
-    public function insertar($nombre,$apellidoPaterno,$apellidoMaterno,$usuario,$contrasena ) {
-        $sql = "INSERT INTO usuarios (nombre, apellidoPaterno, apellidoMaterno, usuario, contraseña) VALUES (?,?,?,?,?)";
+    public function insertar($nombre,$apellidoPaterno,$apellidoMaterno,$usuario,$contrasenia ) {
+        $sql = "INSERT INTO usuarios (nombre, apellidoPaterno, apellidoMaterno, usuario, contrasenia) VALUES (?,?,?,?,?)";
         $resultado = $this->db->prepare($sql);
-        return $resultado->execute([trim($nombre), trim($apellidoPaterno),trim($apellidoMaterno), trim($usuario), trim($contraseña)]);
+        return $resultado->execute([trim($nombre), trim($apellidoPaterno),trim($apellidoMaterno), trim($usuario), trim($contrasenia)]);
     }
 
     public function eliminar($id_usu_pk) {
@@ -31,9 +31,9 @@ class UsuarioModel {
     }
     //utilizar el comando alter table para corregir Ñ en la contraseña y modificar en este codigo
 
-    public function actualizar($id_usu_pk, $usuario,$contrasena) {
-        $sql = "UPDATE usuarios SET  usuario = ?, contraseña =? WHERE id_usu_pk = ?";
+    public function actualizar($id_usu_pk, $usuario,$contrasenia) {
+        $sql = "UPDATE usuarios SET  usuario = ?, contrasenia =? WHERE id_usu_pk = ?";
         $resultado = $this->db->prepare($sql);
-        return $resultado->execute([trim($usuario), trim($contrasena), $id_usu_pk]);
+        return $resultado->execute([trim($usuario), trim($contrasenia), $id_usu_pk]);
     }
 }
