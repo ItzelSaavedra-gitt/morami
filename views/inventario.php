@@ -1,3 +1,9 @@
+<?php
+include 'views/includes/menulateral.php';
+include 'views/includes/parteinferior.php';
+include 'views/includes/partesuperior.php';
+?>
+<?=partesuperior(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -335,3 +341,4 @@
 </script>
 </body>
 </html>
+<?= parteinferior(); ?>
