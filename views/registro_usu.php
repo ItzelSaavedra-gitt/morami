@@ -73,6 +73,15 @@ include 'views/includes/partesuperior.php';
               </select>
             </div>
 
+            <div class="form-group">
+              <label>Estatus</label>
+              <select class="form-control" name="rol">
+                <option value="">Seleccione el estatus del usuario</option>
+                <option value="administrador">Activo</option>
+                <option value="asesor">Inactivo</option>
+              </select>
+            </div>
+
           </div>
 
         </div>
