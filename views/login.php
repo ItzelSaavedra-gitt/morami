@@ -19,9 +19,9 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Ingresa tus credenciales para acceder</p>
 
-      <form action="../../index3.html" method="post">
+      <form action="?menu=login&opc=verificar" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Nombre de usuario">
+          <input type="text" name= "txtusuario" class="form-control" placeholder="Nombre de usuario">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Contraseña">
+          <input type="password" name= "txtcontrasenia" class="form-control" placeholder="Contraseña">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>

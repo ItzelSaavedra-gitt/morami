@@ -29,6 +29,13 @@ class UsuarioModel {
         $resultado->execute([$id_usu_pk]);
         return $resultado->fetch();
     }
+
+    public function validar($usuario,$contrasenia) {
+        $sql = "SELECT * FROM usuarios WHERE usuario = ? and contrasenia = ?";
+        $resultado = $this->db->prepare($sql);
+        $resultado->execute([$usuario,$contrasenia]);
+        return $resultado->fetch();
+    }
     //utilizar el comando alter table para corregir Ñ en la contraseña y modificar en este codigo
 
     public function actualizar($id_usu_pk, $usuario,$contrasenia) {

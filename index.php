@@ -2,16 +2,38 @@
 require_once 'config/database.php';
 require_once 'controllers/UsuarioController.php';
 require_once 'functions.php';
+require_once 'controllers/VerificarController.php';
+require_once 'controllers/PanelController.php';
 
-$menu=$_GET['menu'] ?? 'usuarios';
+$menu=$_GET['menu'] ?? 'principal';
 $opc=$_GET['opc'] ?? 'index';
 
 $db=new Database();
 $conexion = $db->getConnection();//se abre la conexon a base de datos 
 
-
-
-if ($menu=='usuarios'){
+if ($menu=='principal'){
+     include 'views/pantalla_principal.php';
+  
+}else if($menu=='login'){
+    $verificar=new VerificarController($conexion);
+        switch ($opc){
+            case 'index':   
+                $verificar-> index();
+                break;
+            case 'verificar':
+               $verificar->verificar(); 
+                break;
+        }
+}
+else if ($menu=='panel'){
+    $panel = new PanelController($conexion);
+     switch ($opc){
+            case 'index':   
+                $panel-> index();
+                break;
+        }
+  
+}else if ($menu=='usuarios'){
      $usuario=new UsuarioController($conexion);
         switch ($opc){
             case 'index':   

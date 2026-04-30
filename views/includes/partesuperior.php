@@ -1,5 +1,5 @@
 <?php
-function partesuperior()
+function partesuperior($nombre)
 {
   return "
   <!-- Google Font: Source Sans Pro -->
@@ -95,7 +95,7 @@ function partesuperior()
           <img src='public/dist/img/user2-160x160.jpg' class='img-circle elevation-2' alt='User Image'>
         </div>
         <div class='info'>
-          <a href='#' class='d-block'>Administrador</a>
+          <a href='#' class='d-block'>".$nombre."</a>
         </div>
       </div>
     "

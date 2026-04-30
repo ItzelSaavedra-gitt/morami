@@ -48,7 +48,7 @@ function menulateral(): string
     </li>
 
     <li class="nav-item">
-      <a href="pantalla_principal.php" class="nav-link">
+      <a href="?menu=login&opc=index" class="nav-link">
         <i class="nav-icon fas fa-sign-out-alt"></i>
         <p>Cerrar sesión</p>
       </a>

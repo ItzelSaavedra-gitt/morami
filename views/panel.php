@@ -1,9 +1,11 @@
 <?php
-include 'views/includes/menulateral.php';
-include 'views/includes/parteinferior.php';
-include 'views/includes/partesuperior.php';
+require_once 'views/includes/menulateral.php';
+require_once 'views/includes/parteinferior.php';
+require_once 'views/includes/partesuperior.php';
+
+$nombre=$resultado['nombre'];
 ?>
-<?=partesuperior(); ?>
+<?=partesuperior($nombre); ?>
 
     <section class="content">
       <div class="container-fluid">
