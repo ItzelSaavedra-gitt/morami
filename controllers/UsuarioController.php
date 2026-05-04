@@ -58,7 +58,7 @@ class UsuarioController {
         }
         
 
-    public function borrar(int $id): void {
+    function borrar(int $id): void {
         if ($id) {
             $this->modelo->eliminar($id);
         }
@@ -67,7 +67,7 @@ class UsuarioController {
     }
 
   
-    public function editar(int $id):void {
+    function editar(int $id):void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nombre = $_POST['nombre'] ?? '';
             $email = $_POST['email'] ?? '';
@@ -111,5 +111,5 @@ Valida direcciones MAC.
 FILTER_VALIDATE_REGEXP
 Permite validar usando una expresión regular personalizada.
 */
-
+}
 ?>

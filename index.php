@@ -42,12 +42,14 @@ else if ($menu=='panel'){
             case 'registro':
                $usuario->vistacrear(); 
                 break; 
-              $usuario->actualizar($id);
+            case 'actualizar':
+              //$usuario->actualizar($id);
             break;
-            $usuario->agregar($id);
+            case 'agregar':
+            //$usuario->agregar($id);
             break;
         case 'editar': 
-            $usuario->editar($id);
+            //$usuario->editar($id);
             break;
         }
 }

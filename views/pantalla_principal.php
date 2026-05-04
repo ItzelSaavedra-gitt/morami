@@ -74,7 +74,7 @@
   <div class="contenido">
     <img src="public/dist/img/icono_MORAMI-2.jpeg" class="logo"style="opacity: .9" alt="Logo">
 
-    <a href="login.php" class="btn btn-login">
+    <a href="?menu=login&opc=index" class="btn btn-login">
       <i class="fas fa-sign-in-alt"></i> Iniciar sesión
     </a>
   </div>
