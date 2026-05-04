@@ -65,6 +65,24 @@ include 'views/includes/partesuperior.php';
                     }
                     ?>
                   </td>
+                  
+                  <td class="text-center">
+                 <div class="btn-group">
+            <!-- Botón Agregar (Nuevo registro) -->
+            <a href="?menu=usuarios&opc=registro" class="btn btn-success btn-sm" title="Agregar Nuevo">
+              <i class="fas fa-plus"></i>
+            </a>
+            
+            <!-- Botón Consultar -->
+            <a href="?menu=usuarios&opc=ver&id=<?php echo $fila['id_usuario']; ?>" class="btn btn-info btn-sm" title="Consultar">
+              <i class="fas fa-eye"></i>
+            </a>
+            
+            <!-- Botón Actualizar -->
+            <a href="?menu=usuarios&opc=editar&id=<?php echo $fila['id_usuario']; ?>" class="btn btn-warning btn-sm" title="Actualizar">
+              <i class="fas fa-edit"></i>
+            </a>
+                  
                 </tr>
               <?php
               }

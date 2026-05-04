@@ -41,7 +41,14 @@ else if ($menu=='panel'){
                 break;
             case 'registro':
                $usuario->vistacrear(); 
-                break;
+                break; 
+              $usuario->actualizar($id);
+            break;
+            $usuario->agregar($id);
+            break;
+        case 'editar': 
+            $usuario->editar($id);
+            break;
         }
 }
 else if ($menu== 'productos')  {

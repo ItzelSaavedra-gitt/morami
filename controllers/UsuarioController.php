@@ -35,7 +35,6 @@ class UsuarioController {
 
     }
 
-
     public function crear():void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nombre = $_POST['nombre'] ?? '';
@@ -48,6 +47,16 @@ class UsuarioController {
             exit;
         }
     }
+
+    public function consultar(int $id): void {
+        // Le pide al modelo los datos de UN solo usuario por su ID
+        $usuario = $this->modelo->obtenerPorId($id);
+        
+        if (!$usuario) {
+            header("Location: index.php?menu=usuarios&opc=index");
+            exit;
+        }
+        
 
     public function borrar(int $id): void {
         if ($id) {
